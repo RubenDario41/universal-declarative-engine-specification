@@ -60,3 +60,58 @@ Models a complex generative system. It combines a `sensor_source` (for physical 
 ## 5. Conclusion
 
 This architecture demonstrates that a unified, declarative model for interactive applications is both feasible and powerful. By reducing any application to a tree of configured `UniversalObject` instances, it achieves a level of abstraction where the engine is truly universal, and complexity is managed entirely through structured data.
+
+## Esquema de Flujo del Motor Universal (Ilustrativo)
+
+```mermaid
+flowchart TD
+    A[JSON Configuration] --> B[ConfigManager.kt]
+    B --> C[UniversalObject<br/>instances]
+    
+    D[MainActivity.kt] --> E[UniversalObject.Render]
+    E --> F{¿Tiene children?}
+    
+    F -->|Sí| G[RenderAsContainer]
+    F -->|No| H[RenderAsLeaf]
+    
+    G --> I{Layout Type?}
+    I -->|horizontal_list| J[LazyRow]
+    I -->|vertical_list| K[LazyColumn]
+    I -->|row/column| L[Simple Layout]
+    
+    H --> M{¿Tiene imagen?}
+    M -->|Sí| N[RenderWithImage]
+    M -->|No| O[RenderGeneric]
+    
+    N --> P[resolveUniversalImage]
+    P --> Q[Coil ImageLoader]
+    
+    O --> R[Subscribe to EventBus]
+    R --> S[Show live data]
+    
+    %% Plugins y efectos
+    T[EffectRegistry.kt] --> U[EffectApplied]
+    V[FunctionalRegistry.kt] --> W[Activate Plugin]
+    
+    %% Conexiones
+    E --> W
+    N --> U
+    O --> U
+    
+    %% Eventos
+    X[User Gestures] --> Y[detectDragGestures]
+    Y --> Z[Publish to EventBus]
+    Z --> R
+    
+    %% Estilos
+    classDef input fill:#bbdefb,stroke:#0d47a1
+    classDef process fill:#c8e6c9,stroke:#1b5e20
+    classDef output fill:#fff9c4,stroke:#f57f17
+    classDef plugin fill:#e1bee7,stroke:#4a148c
+    classDef event fill:#ffccbc,stroke:#bf360c
+    
+    class A,B,D input
+    class C,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S process
+    class T,U,V,W plugin
+    class X,Y,Z event
+```
