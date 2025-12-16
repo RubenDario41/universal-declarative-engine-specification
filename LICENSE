@@ -1,7 +1,66 @@
-GPLv3 + Cláusula Ética
+# GNU GENERAL PUBLIC LICENSE
 
-Este proyecto está licenciado bajo la Licencia Pública General GNU versión 3 (GPLv3) con la siguiente cláusula adicional:
+Version 3, 29 June 2007
 
-Cláusula Ética: El uso de este software está estrictamente prohibido para el desarrollo, despliegue o apoyo de sistemas de armamento, vigilancia masiva, o cualquier tecnología que atente contra los derechos humanos universales reconocidos por la ONU.
+Copyright (C) [2025] [Rubén Dario, Motor Universal]
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
 
-Para más detalles, consulte el texto completo de la GPLv3.
+           PREÁMBULO
+
+La Licencia Pública General de GNU es una licencia libre para software y otros tipos de obras.
+
+Las licencias para la mayoría del software y otros trabajos prácticos están diseñadas para quitarle la libertad de compartir y cambiar las obras. Por el contrario, la Licencia Pública General de GNU está pensada para garantizar su libertad de compartir y cambiar todas las versiones de un programa—para asegurarse de que permanezca como software libre para todos sus usuarios. Nosotros, la Free Software Foundation, utilizamos la Licencia Pública General de GNU para la mayor parte de nuestro software; también la utiliza cualquier otro.
+
+Cuando hablamos de software libre, nos referimos a la libertad, no al precio. Nuestras Licencias Públicas Generales están diseñadas para asegurarse de que usted tenga la libertad de distribuir copias del software libre (y cobrar por ese servicio si lo desea), que reciba el código fuente o pueda obtenerlo si lo desea, que pueda cambiar el software o utilizar partes de él en nuevos programas libres, y que sepa que puede hacer estas cosas.
+
+Para proteger sus derechos, debemos evitar que otros le nieguen estos derechos o que se los pidan que renuncie a ellos. Por tanto, tiene ciertas responsabilidades si distribuye copias del software, o si lo modifica: la responsabilidad de respetar la libertad de otros.
+
+Por ejemplo, si distribuye copias de tal programa, gratuitamente o por un precio, debe pasar a los destinatarios los mismos derechos que usted recibió. Debe asegurarse que ellos también reciban o puedan obtener el código fuente. Y debe mostrarles estos términos para que conozcan sus derechos.
+
+Los desarrolladores que utilizan la GPL lo hacen para proteger sus derechos con respecto a los usuarios de sus programas, pero también para obtener la ayuda o la mejora de los demás. Para lograrlo, el software libre debe ser de código abierto para todos sus usuarios.
+
+Por tanto, para proteger su libertad, le ofrecemos la licencia de GNU para que la use y la comparta bajo determinados términos.
+
+## TÉRMINOS Y CONDICIONES
+
+**Sección 0. Definiciones.**
+
+La “licencia” se refiere a la versión 3 de la Licencia Pública General de GNU.
+
+“El programa” se refiere a cualquier obra de autoría protegida por derechos de autor que se licencia bajo esta Licencia. Cada “licenciatario” es cualquier persona o entidad que recibe el programa bajo esta licencia.
+
+El “código fuente” de una obra se refiere a la forma preferida de hacer modificaciones a esa obra. El “código objeto” se refiere a cualquier forma que no sea el código fuente.
+
+Para cada trabajo cubierto por esta licencia, se pueden aplicar derechos adicionales; todos ellos se describirán en la licencia que acompaña al programa.
+
+...
+
+(Los términos completos de la GPLv3 en español pueden consultarse y copiarse en:  
+<https://www.gnu.org/licenses/gpl-3.0.txt>)
+
+---
+
+## CLÁUSULA ÉTICA ADICIONAL — UNIVERSAL DECLARATIVE ENGINE
+
+## Artículo 1. Constitución Ética
+
+El uso, copia, modificación y distribución de este software implica la aceptación irrevocable de los principios éticos fundacionales de la “Constitución Universal”, consignada en CONSTITUTION.md, parte integral de este proyecto.
+
+### Principios mínimos
+
+- **No Eliminación:** Ninguna forma o instancia declarada podrá ser borrada sin evaluación previa de su impacto en la integridad sistémica.
+- **Bienestar Colectivo:** Cualquier optimización, mejora o derivado deberá priorizar el bienestar global y no solo la eficiencia individual o local.
+- **Ejecución obligatoria:** Cualquier ejecución de este software DEBE incluir validaciones runtime del cumplimiento constitucional.
+
+## Artículo 2. Sanción
+
+El incumplimiento de estos principios (por omisión, manipulación o eliminación de la constitución) implicará la revocación inmediata, global e irreversible de todos los derechos otorgados bajo esta licencia y, en consecuencia, la imposibilidad legal de usar, modificar o distribuir este software y sus derivados.
+
+## Artículo 3. Licencia Comercial
+
+Para aplicaciones comerciales que no puedan cumplir la obligación de código abierto derivada de la GPLv3 (por ejemplo, obras cerradas o SaaS de código privativo), se puede acceder a una licencia comercial mediante acuerdo directo. Contacto: [rubendariorodriguez644@gmail.com].
+
+Nada de esto exime del estricto cumplimiento de la Constitución Ética.
+
+---
