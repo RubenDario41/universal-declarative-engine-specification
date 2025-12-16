@@ -1,66 +1,51 @@
-# GNU GENERAL PUBLIC LICENSE
+# GNU GENERAL PUBLIC LICENSE  
 
 Version 3, 29 June 2007
 
-Copyright (C) [2025] [Rubén Dario, Motor Universal]
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
 Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.
 
-           PREÁMBULO
+                    Preamble
 
-La Licencia Pública General de GNU es una licencia libre para software y otros tipos de obras.
+The GNU General Public License is a free, copyleft license for software and other kinds of works.
 
-Las licencias para la mayoría del software y otros trabajos prácticos están diseñadas para quitarle la libertad de compartir y cambiar las obras. Por el contrario, la Licencia Pública General de GNU está pensada para garantizar su libertad de compartir y cambiar todas las versiones de un programa—para asegurarse de que permanezca como software libre para todos sus usuarios. Nosotros, la Free Software Foundation, utilizamos la Licencia Pública General de GNU para la mayor parte de nuestro software; también la utiliza cualquier otro.
+The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users. We, the Free Software Foundation, use the GNU General Public License for most of our software; it applies also to any other work released this way by its authors. You can apply it to your programs, too.
 
-Cuando hablamos de software libre, nos referimos a la libertad, no al precio. Nuestras Licencias Públicas Generales están diseñadas para asegurarse de que usted tenga la libertad de distribuir copias del software libre (y cobrar por ese servicio si lo desea), que reciba el código fuente o pueda obtenerlo si lo desea, que pueda cambiar el software o utilizar partes de él en nuevos programas libres, y que sepa que puede hacer estas cosas.
+When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for them if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs, and that you know you can do these things.
 
-Para proteger sus derechos, debemos evitar que otros le nieguen estos derechos o que se los pidan que renuncie a ellos. Por tanto, tiene ciertas responsabilidades si distribuye copias del software, o si lo modifica: la responsabilidad de respetar la libertad de otros.
+To protect your rights, we need to make restrictions that forbid anyone to deny you these rights or to ask you to surrender the rights. These restrictions translate to certain responsibilities for you if you distribute copies of the software, or if you modify it.
 
-Por ejemplo, si distribuye copias de tal programa, gratuitamente o por un precio, debe pasar a los destinatarios los mismos derechos que usted recibió. Debe asegurarse que ellos también reciban o puedan obtener el código fuente. Y debe mostrarles estos términos para que conozcan sus derechos.
+For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received. You must make sure that they, too, receive or can get the source code. And you must show them these terms so they know their rights.
 
-Los desarrolladores que utilizan la GPL lo hacen para proteger sus derechos con respecto a los usuarios de sus programas, pero también para obtener la ayuda o la mejora de los demás. Para lograrlo, el software libre debe ser de código abierto para todos sus usuarios.
+Developers who use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you this License giving you legal permission to copy, distribute and/or modify it.
 
-Por tanto, para proteger su libertad, le ofrecemos la licencia de GNU para que la use y la comparta bajo determinados términos.
+For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software. For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions.
 
-## TÉRMINOS Y CONDICIONES
+**(Full license text available at <https://www.gnu.org/licenses/gpl-3.0.txt>)**
 
-**Sección 0. Definiciones.**
+## ADDITIONAL ETHICAL CLAUSE — UNIVERSAL DECLARATIVE ENGINE
 
-La “licencia” se refiere a la versión 3 de la Licencia Pública General de GNU.
+## Article 1. Ethical Constitution
 
-“El programa” se refiere a cualquier obra de autoría protegida por derechos de autor que se licencia bajo esta Licencia. Cada “licenciatario” es cualquier persona o entidad que recibe el programa bajo esta licencia.
+Use, copying, modification, and distribution of this software implies the irrevocable acceptance of the founding ethical principles established in the “Universal Constitution”, set forth in CONSTITUTION.md, which is an integral part of this project.
 
-El “código fuente” de una obra se refiere a la forma preferida de hacer modificaciones a esa obra. El “código objeto” se refiere a cualquier forma que no sea el código fuente.
+### Minimum Principles
 
-Para cada trabajo cubierto por esta licencia, se pueden aplicar derechos adicionales; todos ellos se describirán en la licencia que acompaña al programa.
+- **Non-Elimination:** No declared form or instance may be deleted without prior evaluation of its impact on system integrity.
+- **Collective Wellbeing:** Any optimization, improvement, or derivative must prioritize global wellbeing, not just individual or local efficiency.
+- **Mandatory Enforcement:** Every execution of this software MUST include runtime validations of constitutional compliance.
 
-...
+## Article 2. Sanction
 
-(Los términos completos de la GPLv3 en español pueden consultarse y copiarse en:  
-<https://www.gnu.org/licenses/gpl-3.0.txt>)
+Failure to adhere to these principles (by omission, manipulation, or removal of the constitution) will result in the immediate, global, and irreversible revocation of all rights granted under this license, effectively terminating the legal right to use, modify, or distribute this software and its derivatives.
 
----
+## Article 3. Commercial License
 
-## CLÁUSULA ÉTICA ADICIONAL — UNIVERSAL DECLARATIVE ENGINE
+For commercial applications that cannot comply with the open-source requirement of GPLv3 (e.g., closed-source works or proprietary SaaS), a commercial license is available via direct agreement. Contact: [your_legal_channel_or_website].
 
-## Artículo 1. Constitución Ética
-
-El uso, copia, modificación y distribución de este software implica la aceptación irrevocable de los principios éticos fundacionales de la “Constitución Universal”, consignada en CONSTITUTION.md, parte integral de este proyecto.
-
-### Principios mínimos
-
-- **No Eliminación:** Ninguna forma o instancia declarada podrá ser borrada sin evaluación previa de su impacto en la integridad sistémica.
-- **Bienestar Colectivo:** Cualquier optimización, mejora o derivado deberá priorizar el bienestar global y no solo la eficiencia individual o local.
-- **Ejecución obligatoria:** Cualquier ejecución de este software DEBE incluir validaciones runtime del cumplimiento constitucional.
-
-## Artículo 2. Sanción
-
-El incumplimiento de estos principios (por omisión, manipulación o eliminación de la constitución) implicará la revocación inmediata, global e irreversible de todos los derechos otorgados bajo esta licencia y, en consecuencia, la imposibilidad legal de usar, modificar o distribuir este software y sus derivados.
-
-## Artículo 3. Licencia Comercial
-
-Para aplicaciones comerciales que no puedan cumplir la obligación de código abierto derivada de la GPLv3 (por ejemplo, obras cerradas o SaaS de código privativo), se puede acceder a una licencia comercial mediante acuerdo directo. Contacto: [rubendariorodriguez644@gmail.com].
-
-Nada de esto exime del estricto cumplimiento de la Constitución Ética.
+Nothing herein exempts from the strict compliance with the Ethical Constitution.
 
 ---
+
+**Please refer to CONSTITUTION.md for the complete text of the Universal Ethical Constitution.**
