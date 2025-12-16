@@ -1,0 +1,57 @@
+{
+  "id": "tarot_major_arcana",
+  "type": "container",
+  "epigenome": {
+    "layout": "vertical_list",
+    "description": "A deck of Major Arcana cards as UniversalObjects"
+  },
+  "state": {
+    "visible": true
+  },
+  "children": [
+    {
+      "id": "card_the_fool",
+      "type": "card",
+      "epigenome": {
+        "name": "The Fool",
+        "number": 0,
+        "image_asset": "el_loco.webp",
+        "aspect_ratio": 0.666,
+        "category": "major_arcana",
+        "element": "Air",
+        "base_frequency_hz": 963,
+        "semantic_template": {
+          "upright": "Potential, new beginnings, leap of faith",
+          "reverse": "Chaos, lack of direction"
+        }
+      },
+      "state": {
+        "face_up": false,
+        "rotation_degrees": 0,
+        "position_x": 100,
+        "position_y": 150,
+        "highlighted": false
+      }
+    },
+    {
+      "id": "card_the_magician",
+      "type": "card",
+      "epigenome": {
+        "name": "The Magician",
+        "number": 1,
+        "image_asset": "the_magician.webp",
+        "aspect_ratio": 0.666,
+        "category": "major_arcana",
+        "element": "Air",
+        "base_frequency_hz": 852
+      },
+      "state": {
+        "face_up": true,
+        "rotation_degrees": 0,
+        "position_x": 250,
+        "position_y": 150,
+        "highlighted": true
+      }
+    }
+  ]
+}

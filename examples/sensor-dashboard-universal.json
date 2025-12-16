@@ -1,0 +1,42 @@
+{
+  "id": "physics_sensor_dashboard",
+  "type": "container",
+  "epigenome": {
+    "layout": "vertical_list",
+    "purpose": "Real-time display of device physics sensors"
+  },
+  "state": {
+    "visible": true
+  },
+  "children": [
+    {
+      "id": "sensor_accel",
+      "type": "sensor_source",
+      "epigenome": {
+        "sensor_type": "ACCELEROMETER",
+        "unit": "m/s²",
+        "sampling_rate_ms": 100,
+        "visual_theme": "physics"
+      },
+      "state": {
+        "active": true,
+        "last_value_x": 0.12,
+        "last_value_y": 9.81,
+        "last_value_z": 0.05
+      }
+    },
+    {
+      "id": "display_accel",
+      "type": "visual_display",
+      "epigenome": {
+        "display_format": "vector_3d",
+        "listens_to_channel": "accel_data",
+        "visual_theme": "physics"
+      },
+      "state": {
+        "visible": true,
+        "text": "Accel: (0.12, 9.81, 0.05) m/s²"
+      }
+    }
+  ]
+}
