@@ -51,6 +51,49 @@ This is not just another framework. It's an attempt to find a fundamental patter
 
 **Let's build the one engine to rule them all. Not by domination, but by unification.**
 
+## Ciclo de Interacción Data-Driven (Secuencia Ilustrativa)
+
+```mermaid
+sequenceDiagram
+    participant U as Usuario
+    participant FV as UniversalFocusView
+    participant R as UniversalObject.Render
+    participant EB as LocalEventBus
+    participant SC as UniversalScreen
+    participant VM as UniversalViewModel
+    participant ML as ManageObjectLifecycle
+    participant LOG as activateDataSubscriber
+
+    %% 1. Usuario hace gesto
+    U->>FV: Swipe/Tap/Arrastre
+    FV->>R: detectDragGestures()
+    R->>EB: publish("user_gesture")
+
+    %% 2. Evento viaja al ViewModel
+    EB->>SC: "user_gesture" collect
+    SC->>VM: handleGesture(gesture)
+
+    %% 3. ViewModel procesa
+    VM->>VM: updateFocusIndex() / drillDown()
+    VM->>VM: mutateEpigenome() si aplica
+    VM->>VM: saveSession() (debounce)
+
+    %% 4. UI actualiza
+    VM->>SC: uiState actualizado
+    SC->>FV: Recomposition
+    FV->>R: Render con nuevo estado
+
+    %% 5. Suscripciones en tiempo real
+    R->>ML: ManageObjectLifecycle()
+    ML->>LOG: activateDataSubscriber()
+    LOG->>EB: subscribe(channel)
+
+    %% 6. Datos en tiempo real
+    EB->>LOG: Datos nuevos
+    LOG->>EB: Resultados procesados
+    EB->>R: Actualiza display
+```
+
 ## License
 
 This project is licensed under the **GNU General Public License v3.0**.
