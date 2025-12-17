@@ -115,3 +115,148 @@ flowchart TD
     class T,U,V,W plugin
     class X,Y,Z event
 ```
+
+## 1. The UniversalObject: A Formal Definition
+
+The `UniversalObject` (UO) is the atomic, recursive building block of the entire system. It is formally defined as a 7-tuple:
+
+`UO = (id, type, state, epigenome, children, renderer, lifecycle)`
+
+### 1.1 Tuple Components
+
+- **`id`**: A unique string identifier.
+- **`type`**: A string key mapping to a **Plugin** responsible for the object's behavior and rendering (e.g., `text`, `image`, `gauge`, `card`, `container`).
+- **`state`**: Mutable, observable data for the object. This changes during user interaction (e.g., `text content`, `numeric value`, `position coordinates`).
+- **`epigenome`**: An **immutable** property map defining inherent characteristics, constraints, and default styling. Passed to children, can be overridden, and supports theme propagation (similar to biological epigenetic inheritance).
+- **`children`**: Ordered list of child `UniversalObject` instances, allowing deep, composable hierarchies.
+- **`renderer`**: Reference to the plugin component translating `state` and `epigenome` into a platform-specific representation (pixels, sound, haptics, etc.).
+- **`lifecycle`**: Manages the object's phases (`created`, `active`, `suspended`, `archived`). Controlled by the FocusView's virtualization for resource efficiency.
+
+### 1.2 Tuple Axioms
+
+- **Universality**: Every element in any application domain is an instance of `UniversalObject`.
+- **Recursion**: A `UniversalObject` can contain other `UniversalObject`s, with no conceptual limit on nesting.
+- **Declarativity**: Structure and initial configuration of a UO tree are defined purely declaratively (e.g., via JSON manifest).
+
+---
+
+## 2. Unified Runtime Components
+
+### 2.1 UniversalScreen
+
+- Singleton canvas.
+- Hosts the root `UniversalObject` tree.
+- Orchestrates the render cycle across all active objects.
+- Handles platform-level events (window resizing, app lifecycle).
+
+### 2.2 UniversalViewModel
+
+- Single source of truth for app state.
+- Holds a reactive reference to the `state` of every `UniversalObject`.
+- Applies state transition functions immutably.
+- Enables centralized time-travel debugging and state serialization.
+
+### 2.3 UniversalFocusView
+
+- Attention and performance engine; models user focus in 3D spatial context.
+- **Focus Regions**: Tracks which objects are in `primary focus`, `near buffer`, or `latent field`.
+- **Lifecycle Control**: Signals `UniversalObject.lifecycle` to activate, suspend, or archive objects based on focus region.
+- **Virtualization**: Only fully renders objects in/near focus, enabling the engine to handle extremely large object trees.
+
+---
+
+## 3. The Plugin System
+
+Plugins bridge the universal engine to domain-specific needs.
+
+A plugin must provide:
+
+1. **Behavior**: Reacts to state changes and user events.
+2. **Renderer**: Translates state and epigenome into visuals/interactions.
+
+Plugins are discovered at runtime by their registered `type` string.
+> See [examples/](./examples) for live plugin usage.
+
+---
+
+## 4. Declarative Manifest
+
+The entire application is defined through a JSON (or equivalent) manifest, specifying:
+
+1. The initial tree of `UniversalObject` instances.
+2. Mapping of `type` strings to plugin identifiers.
+3. Initial `state` and `epigenome` for each object.
+4. Declarative event–response rules.
+
+**Example snippet:**  
+
+```json
+{
+  "root_object": {
+    "id": "app_root",
+    "type": "vertical_container",
+    "children": [
+      {
+        "id": "title",
+        "type": "text",
+        "epigenome": {"font_size": 24},
+        "state": {"content": "Hello, World"}
+      },
+      {
+        "id": "sensor_display",
+        "type": "gauge",
+        "epigenome": {"min": 0, "max": 100, "color": "green"},
+        "state": {"value": 42}
+      }
+    ]
+  }
+}
+```
+
+Change the manifest, and you change the whole app. No recompilation, no new UI code.
+
+For further examples, visit [`examples/`](./examples).
+
+---
+
+## 5. Base Interfaces in Kotlin
+
+For implementation details, see the core interfaces in [`src/interfaces/`](./src/interfaces/):
+
+```kotlin
+// UniversalObject.kt
+package org.universal.engine
+
+data class UniversalObject(
+    val id: String,
+    val type: String,
+    val epigenome: Map<String, Any> = emptyMap(),
+    val children: List<UniversalObject> = emptyList()
+) {
+    // Lifecycle state managed by UniversalFocusView
+    enum class LifecycleState { CREATED, ACTIVE, SUSPENDED, ARCHIVED }
+}
+
+// UniversalScreen.kt
+interface UniversalScreen {
+    fun setRootObject(root: UniversalObject)
+    fun requestRender()
+}
+
+// UniversalViewModel.kt
+interface UniversalViewModel {
+    fun getState(objectId: String): State?
+    fun updateState(objectId: String, stateUpdate: (State) -> State)
+    data class State(val data: Map<String, Any>)
+}
+
+// UniversalFocusView.kt
+interface UniversalFocusView {
+    fun setFocus(point: FocusPoint)
+    data class FocusPoint(val x: Float, val y: Float, val z: Float = 0f)
+}
+```
+
+---
+
+For further details, see the full specification and implementation in this repository, or contact the maintainers for architecture discussions.
