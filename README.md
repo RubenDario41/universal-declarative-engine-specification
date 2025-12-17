@@ -1,5 +1,7 @@
 # Universal Declarative Engine
 
+[🚀 Ir a la Landing Page](https://RubenDario41.github.io/universal-declarative-engine-specification/)
+
 > One recursive object model for any interactive domain.
 
 ## The Problem
